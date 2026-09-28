@@ -1,0 +1,77 @@
+.dashboard{
+ display: flex;
+ flex: 1;
+ flex-direction: column;
+}
+.blocks{
+    display: flex;
+    margin-bottom: 15px;
+flex: 1;
+}
+.total-tasks, .completed, .progress{
+
+flex:1;
+background-color: rgb(161, 10, 10);
+margin-right: 10px;
+margin-left: 10px;
+}
+.middle-part{
+    flex: 1;
+    display: flex;
+    margin-bottom: 15px;
+}
+.task-progress, .task-status{
+    margin-right: 15px;
+    flex:1;
+    background-color: rgb(65, 134, 87);
+}
+.bottom-part{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+   
+}
+.Task, .Priority, .Status, .Due{
+ 
+  flex:1;
+    margin-right: 15px;
+ background-color: rgb(62, 190, 194);
+ border: solid;
+ border-radius: 15px;
+
+  
+}
+.recent-tasks{
+display: flex;
+justify-content: center;
+
+}
+.task-row{
+    display: flex;
+   flex:1;
+}
+.heading{
+    text-decoration: underline;
+  flex:1;
+}
+
+.task-heading{
+    display: flex;
+  
+
+}
+.progress-container{
+    width:100px;
+    height:10px;
+    border-radius: 5px;
+    background-color: red;
+}
+.progress-bar{
+    height: 100%;
+   border-radius: 5px;
+    background-color: blue;
+}
+.add-task-button{
+    width:100px;
+    
+}

@@ -1,0 +1,38 @@
+import { Sidebar } from "./components/Sidebar";
+import { Header } from "./components/header";
+import { Dashboard } from "./pages/Dashboard";
+import "./App.css"
+ function App(){
+
+
+
+return(
+
+
+
+
+<div className="app">
+<Sidebar/>
+
+
+
+<div className="main">
+<Header/>
+<Dashboard/>
+
+</div>
+</div>
+
+
+
+
+
+);
+
+
+
+
+
+
+}
+export default App;

@@ -1,0 +1,58 @@
+.header-container{
+ background-color: rgb(216, 206, 206);   
+ height: 60px;
+ display: flex;
+ align-items: center;
+
+ 
+}
+.middle-section{
+    flex:1;
+    min-width: 300px;
+}
+.search{
+    width: 100%;
+    padding: 12px;
+   
+    border-radius: 10px;
+
+
+}
+.header-flex{
+    display: flex;
+    align-items: center;
+
+   width:100%;
+ 
+
+
+}
+.left-section{
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 15px;
+ display: flex;
+ flex:1;
+}
+.bell-icon, .account-icon{
+    height: 30px;
+  
+    
+}
+.right-section{
+    display: flex;
+flex:1;
+justify-content: flex-end;
+align-items: center;
+}
+.right-section button{
+    margin-right: 10px;
+    border-radius: 15px;
+}
+.name{
+    margin-right: 10px;
+    font-size: medium;
+    font-weight: 400;
+    
+}

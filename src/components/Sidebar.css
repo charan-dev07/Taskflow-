@@ -1,0 +1,43 @@
+.side-bar{
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+  
+    background-color: hsl(228, 88%, 13%);
+    color:white;
+    width: 250px;
+
+   min-height: 100vh;
+    
+
+}
+body{
+    margin: 0px;
+}
+
+.side-bar div, .side-bar h4{
+    margin-left: 10px;
+}
+
+
+
+.flex-1:hover{
+    transition:background-color 0.15s;
+background-color:#848988;
+}
+
+.logo{
+    height: 25px;
+}
+.flex-1{
+    display: flex;
+    align-items: center;
+
+}
+.logo-1{
+    height:100px;
+   
+}
+.brand-logo:hover{
+    background-color: none;
+}
