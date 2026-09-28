@@ -332,6 +332,14 @@ export function Dashboard({searchFilter}) {
 
 
         <h2 className="recent-tasks">Recent Tasks</h2>
+        
+        <button  className="clear-all-tasks-button"
+        
+       onClick={()=>{
+        setTasks([]);
+       }}
+        
+        >Clear All Tasks</button>
 
         <div className="task-heading">
           <p className="heading">Task</p>
@@ -378,6 +386,10 @@ export function Dashboard({searchFilter}) {
               >
                 Edit
               </button>
+
+              
+
+
             </div>
           );
         })}
