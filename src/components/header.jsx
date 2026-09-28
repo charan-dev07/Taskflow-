@@ -1,6 +1,7 @@
+
 import './header.css';
 
-export function Header(){
+export function Header({searchFilter, setSearchFilter}){
 
     return(
 
@@ -15,7 +16,14 @@ export function Header(){
         Dashboard
     </div>
     <div className='middle-section'>
-<input className='search' type="text" placeholder='search' />
+<input className='search' type="text" placeholder='search' 
+value={searchFilter}
+onChange={(event)=>{
+    setSearchFilter(event.target.value)
+}}
+
+/>
+
 
     </div>
     <div className='right-section'>
@@ -32,35 +40,6 @@ export function Header(){
     </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     );
-
-
-
-
-
-
-
-
-
-
 }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./Dashboard.css";
 
-export function Dashboard() {
+export function Dashboard({searchFilter}) {
   const [isModal, setModal] = useState(false);
   const [filterStatus,setFilterStatus]=useState("All");
   const [newTask, setnewTask] = useState({
@@ -162,7 +162,7 @@ export function Dashboard() {
                 type="text"
                 placeholder="Name"
               />
-
+            
               <label htmlFor="">Priority:</label>
 
               <select
@@ -330,6 +330,8 @@ export function Dashboard() {
 
         {tasks.filter((task)=>{
           return filterStatus==="All" || task.status===filterStatus;
+        }).filter((task)=>{
+          return searchFilter==="" | task.name===searchFilter;
         }).map((task) => {
           return (
             <div className="task-row" key={task.id}>
