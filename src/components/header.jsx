@@ -2,7 +2,9 @@
 import './header.css';
 
 export function Header({searchFilter, setSearchFilter}){
-
+function lowercase(string){
+    return string.toLowerCase();
+}
     return(
 
 
@@ -19,7 +21,7 @@ export function Header({searchFilter, setSearchFilter}){
 <input className='search' type="text" placeholder='search' 
 value={searchFilter}
 onChange={(event)=>{
-    setSearchFilter(event.target.value)
+    setSearchFilter(lowercase(event.target.value))
 }}
 
 />

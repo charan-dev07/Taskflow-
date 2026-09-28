@@ -331,7 +331,7 @@ export function Dashboard({searchFilter}) {
         {tasks.filter((task)=>{
           return filterStatus==="All" || task.status===filterStatus;
         }).filter((task)=>{
-          return searchFilter==="" | task.name===searchFilter;
+          return searchFilter==="" || task.name.toLowerCase().includes(searchFilter);
         }).map((task) => {
           return (
             <div className="task-row" key={task.id}>
