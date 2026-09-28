@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./Dashboard.css";
 
 export function Dashboard({searchFilter}) {
+
+
+    
+
+
   const [isModal, setModal] = useState(false);
   const [filterStatus,setFilterStatus]=useState("All");
   const [newTask, setnewTask] = useState({
@@ -16,7 +21,7 @@ export function Dashboard({searchFilter}) {
     return setModal(!isModal);
   };
 
-  const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState( JSON.parse(localStorage.getItem("tasks")) ||[ 
     {
       name: "Build UI",
       priority: "High",
@@ -40,7 +45,14 @@ export function Dashboard({searchFilter}) {
       due: "Sat",
       id: crypto.randomUUID(),
     },
-  ]);
+  ]  );
+ useEffect(()=>{
+      localStorage.setItem("tasks",JSON.stringify(tasks));
+     },[tasks]);
+
+
+
+
 
   function deleteTask(clickedId) {
     const remainingTasks = tasks.filter((task) => {
