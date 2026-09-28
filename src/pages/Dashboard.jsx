@@ -4,7 +4,7 @@ import "./Dashboard.css";
 
 export function Dashboard() {
   const [isModal, setModal] = useState(false);
-
+  const [filterStatus,setFilterStatus]=useState("All");
   const [newTask, setnewTask] = useState({
     name: "",
     priority: "",
@@ -114,7 +114,7 @@ export function Dashboard() {
                   newTask.due !== ""
                 ) {
                   if (editedTaskId === null) {
-                    // ADD NEW TASK
+              
                     setTasks([
                       ...tasks,
                       {
@@ -123,7 +123,7 @@ export function Dashboard() {
                       },
                     ]);
                   } else {
-                    // EDIT EXISTING TASK
+               
                     const updatedTasks = tasks.map((task) => {
                       if (task.id === editedTaskId) {
                         return {
@@ -300,6 +300,25 @@ export function Dashboard() {
       </div>
 
       <div className="bottom-part">
+        <h4>Select Status:</h4>
+        <select name="Status" id="status"
+          value={filterStatus}
+          onChange={(event)=>{
+            setFilterStatus(event.target.value);
+          }}
+        
+        >
+          <option value="All">All</option>
+          <option value="In Progress">In Progress</option>
+         <option value="Pending">Pending</option>
+         <option value="Completed">Completed</option>
+          
+        </select>
+
+         
+
+
+
         <h2 className="recent-tasks">Recent Tasks</h2>
 
         <div className="task-heading">
@@ -309,7 +328,9 @@ export function Dashboard() {
           <p className="heading">Due</p>
         </div>
 
-        {tasks.map((task) => {
+        {tasks.filter((task)=>{
+          return filterStatus==="All" || task.status===filterStatus;
+        }).map((task) => {
           return (
             <div className="task-row" key={task.id}>
               <div className="Task">
