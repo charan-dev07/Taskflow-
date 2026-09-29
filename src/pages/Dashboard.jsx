@@ -93,7 +93,21 @@ const [filterPriority,setFilterPriority]=useState("All");
   const pendingTasksnumber =tasks.length===0 ? 0 : pendingTasks.length / tasks.length;
   const progressTasksnumber = tasks.length===0 ? 0 : progressTasks.length / tasks.length;
   const completedTasksnumber = tasks.length ===0 ?0 :completedTasks.length / tasks.length;
-
+  const filteredTasks=tasks.filter((task)=>{
+          return filterStatus==="All" || task.status===filterStatus;
+        }).filter((task)=>{
+          return searchFilter==="" || task.name.toLowerCase().includes(searchFilter);
+        }).filter((task)=>{
+          return filterPriority==="All" ||task.priority===filterPriority;
+        });
+   const priorityOrder={
+    Low:1,
+    Medium:2,
+    High:3
+   }
+   filteredTasks.sort((a,b)=>{
+    return priorityOrder[b.priority]- priorityOrder[a.priority];
+   })
   return (
     <div className="dashboard">
       <p>Welcome-back, Charan ✌️</p>
@@ -382,15 +396,9 @@ const [filterPriority,setFilterPriority]=useState("All");
         {
         
         tasks.length===0?<p className="no-tasks">NO TASKS FOUND</p> :
-        
-        tasks.filter((task)=>{
-          return filterStatus==="All" || task.status===filterStatus;
-        }).filter((task)=>{
-          return searchFilter==="" || task.name.toLowerCase().includes(searchFilter);
-        }).filter((task)=>{
-          return filterPriority==="All" ||task.priority===filterPriority;
-        })
-        .map((task) => {
+      
+      
+     filteredTasks.length===0?<p className="no-tasks">NO TASKS FOUND</p> :  filteredTasks.map((task) => {
           return (
         
             <div className="task-row" key={task.id}>
