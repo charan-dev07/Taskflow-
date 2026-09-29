@@ -6,7 +6,7 @@ export function Dashboard({searchFilter}) {
 
 
     
-
+const [newModal,setNewModal]=useState(false);
 const [filterPriority,setFilterPriority]=useState("All");
   const [isModal, setModal] = useState(false);
   const [filterStatus,setFilterStatus]=useState("All");
@@ -358,11 +358,20 @@ const [filterPriority,setFilterPriority]=useState("All");
         <button  className="clear-all-tasks-button"
         
        onClick={()=>{
-        setTasks([]);
+        setNewModal(true);
        }}
         
         >Clear All Tasks</button>
-
+ {newModal &&   <div className="confirmation">
+          <p>Are you sure you want to delete all tasks?</p>
+          <button onClick={()=>{
+            setNewModal(false);
+          }}>Cancel</button>
+          <button onClick={()=>{
+            setTasks([]);
+            setNewModal(false);
+          }}>Delete All</button>
+       </div> }
         <div className="task-heading">
           <p className="heading">Task</p>
           <p className="heading">Priority</p>
