@@ -90,9 +90,9 @@ export function Dashboard({searchFilter}) {
     return task.status === "Pending";
   });
 
-  const pendingTasksnumber = pendingTasks.length / tasks.length;
-  const progressTasksnumber = progressTasks.length / tasks.length;
-  const completedTasksnumber = completedTasks.length / tasks.length;
+  const pendingTasksnumber =tasks.length===0 ? 0 : pendingTasks.length / tasks.length;
+  const progressTasksnumber = tasks.length===0 ? 0 : progressTasks.length / tasks.length;
+  const completedTasksnumber = tasks.length ===0 ?0 :completedTasks.length / tasks.length;
 
   return (
     <div className="dashboard">
@@ -261,9 +261,10 @@ export function Dashboard({searchFilter}) {
       <div className="middle-part">
         <div className="task-progress">
           <p>TASK PROGRESS</p>
-
+          
           <ul>
             <li>
+              
               Completed - {(completedTasksnumber * 100).toFixed(2)}%
             </li>
 
