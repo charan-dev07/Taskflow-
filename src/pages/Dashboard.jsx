@@ -7,7 +7,7 @@ export function Dashboard({searchFilter}) {
 
     
 
-
+const [filterPriority,setFilterPriority]=useState("All");
   const [isModal, setModal] = useState(false);
   const [filterStatus,setFilterStatus]=useState("All");
   const [newTask, setnewTask] = useState({
@@ -213,6 +213,11 @@ export function Dashboard({searchFilter}) {
                 <option value="Completed">Completed</option>
               </select>
 
+
+
+
+
+
               <input
                 value={newTask.due}
                 onChange={(event) => {
@@ -328,7 +333,23 @@ export function Dashboard({searchFilter}) {
           
         </select>
 
-         
+         <h4>Select Priority:</h4>
+             <select name="Priority" id="Priority"
+             value={filterPriority}
+             onChange={(event)=>{
+              setFilterPriority(event.target.value);
+             }}
+             
+             >
+               <option value="All">All</option>
+              <option value="Low">Low</option>
+               <option value="Medium">Medium</option>
+              <option value="High">High</option>
+
+
+
+
+             </select>
 
 
 
@@ -349,12 +370,20 @@ export function Dashboard({searchFilter}) {
           <p className="heading">Due</p>
         </div>
 
-        {tasks.filter((task)=>{
+        {
+        
+        tasks.length===0?<p className="no-tasks">NO TASKS FOUND</p> :
+        
+        tasks.filter((task)=>{
           return filterStatus==="All" || task.status===filterStatus;
         }).filter((task)=>{
           return searchFilter==="" || task.name.toLowerCase().includes(searchFilter);
-        }).map((task) => {
+        }).filter((task)=>{
+          return filterPriority==="All" ||task.priority===filterPriority;
+        })
+        .map((task) => {
           return (
+        
             <div className="task-row" key={task.id}>
               <div className="Task">
                 <p>{task.name}</p>

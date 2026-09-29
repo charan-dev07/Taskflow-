@@ -82,7 +82,11 @@ justify-content: center;
     margin-right: auto;
 }
 
-
+.no-tasks{
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
 
 
 
