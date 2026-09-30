@@ -1,6 +1,6 @@
 import "./Sidebar.css";
 
-
+import { Link } from "react-router";
 
 export function Sidebar(){
 
@@ -16,13 +16,13 @@ return (
     </div>
  <div className="flex-1">
 <img className="logo" src="/data-visualization.png" alt="" />
-<div>DashBoard</div>
+<Link to="/" >DashBoard</Link>
 </div>
 
 <div className="flex-1">
 <img className="logo" src="/task.png" alt="" />
 
-<div>My Tasks</div>
+<Link to="/MyTasks">My Tasks</Link>
 </div>
 
 <div className="flex-1">
@@ -63,7 +63,7 @@ return (
 
 <div className="flex-1">
 <img className="logo" src="/Analytics.png" alt="" />
-<div>Analytics</div>
+<Link to="/Analytics">Analytics</Link>
 </div>
 
 <h4></h4>
@@ -71,7 +71,7 @@ return (
 <div className="flex-1">
     <img className="logo" src="/settings.png" alt="" />
     
-<div>Settings</div>
+<Link to="/Settings">Settings</Link>
 </div>
 
 

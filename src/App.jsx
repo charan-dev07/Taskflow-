@@ -2,6 +2,10 @@ import { Sidebar } from "./components/Sidebar";
 import { Header } from "./components/header";
 import { Dashboard } from "./pages/Dashboard";
 import { useState } from "react";
+import { Route, Routes } from "react-router";
+import { MyTasks } from "./pages/MyTasks";
+import { Analytics } from "./pages/Analytics";
+import { Settings } from "./pages/settings";
 import "./App.css"
  function App(){
 
@@ -24,7 +28,18 @@ searchFilter={searchFilter}
 setSearchFilter={setSearchFilter}
 
 />
-<Dashboard searchFilter={searchFilter}/>
+
+<Routes>
+
+<Route path="/" element={<Dashboard searchFilter={searchFilter}/>
+}> 
+</Route>
+
+<Route path="/Mytasks" element={<MyTasks/>}></Route>
+<Route    path="/Analytics" element={<Analytics/>}  ></Route>
+<Route path="/Settings" element={<Settings/>}></Route>
+
+</Routes>
 
 </div>
 </div>
