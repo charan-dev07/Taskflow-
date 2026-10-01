@@ -9,7 +9,7 @@
     margin-bottom: 15px;
 flex: 1;
 }
-.total-tasks, .completed, .progress{
+.total-tasks, .completed, .progress, .pending{
 
 flex:1;
 background-color: rgb(161, 10, 10);

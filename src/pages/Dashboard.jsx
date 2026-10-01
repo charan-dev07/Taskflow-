@@ -276,6 +276,14 @@ const [filterPriority,setFilterPriority]=useState("All");
           <p>In progress</p>
           <h2>{progressTasks.length}</h2>
         </div>
+
+        <div className="pending">
+          <p>Pending</p>
+          <h2>{pendingTasks.length}</h2>
+
+        </div>
+
+
       </div>
 
       <div className="middle-part">
