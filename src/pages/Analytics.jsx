@@ -78,7 +78,7 @@ const lowprioritynumber=tasks.length===0 ? 0 : lowpriority.length;
 const priorityData= [
 {name:"High" ,value :highprioritynumber },
 {name:"Medium" , value: mediumprioritynumber},
-{name: "High" , value: highprioritynumber}
+{name: "Low" , value: lowprioritynumber}
 ]
 
 
