@@ -18,6 +18,9 @@
 
 
 }
+.bell-icon-button{
+    margin-left: 30px;
+}
 .header-flex{
     display: flex;
     align-items: center;
@@ -37,7 +40,7 @@
 }
 .bell-icon, .account-icon{
     height: 30px;
-  
+ 
     
 }
 .right-section{
@@ -55,4 +58,15 @@ align-items: center;
     font-size: medium;
     font-weight: 400;
     
+}
+
+
+@media (max-width: 768px){
+.middle-section{
+    min-width: 0;
+}
+
+
+
+
 }

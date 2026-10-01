@@ -41,3 +41,47 @@ background-color:#848988;
 .brand-logo:hover{
     background-color: none;
 }
+
+@media (max-width: 768px){
+
+.side-bar {
+    width:70px;
+   gap: 20px;
+
+}
+.side-bar span{
+    display:none;
+}
+
+.brand-logo{
+    display: none;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

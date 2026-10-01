@@ -16,19 +16,25 @@ return (
     </div>
  <div className="flex-1">
 <img className="logo" src="/data-visualization.png" alt="" />
+<span>
 <Link to="/" >DashBoard</Link>
+</span>
+
 </div>
 
 <div className="flex-1">
 <img className="logo" src="/task.png" alt="" />
-
+<span>
+    
 <Link to="/MyTasks">My Tasks</Link>
+</span>
 </div>
 
 <div className="flex-1">
 
     <img className="logo " src="/inbox.png" alt="" />
-<div>Inbox</div>
+    <span><div>Inbox</div></span>
+
 </div>
 
 
@@ -36,57 +42,77 @@ return (
 <div className="flex-1">
 
 <img className="logo" src="/calender.png" alt="" />
-<div>Calender</div>
+<span>
+    <div>Calender</div>
+
+</span>
 </div>
 
 
 <div className="flex-1">
     <img  className="logo" src="/report.png" alt="" />
-    <div>Reports</div>
+    <span>
+            <div>Reports</div>
+
+    </span>
 </div>
 
 <div className="flex-1">
     <img className="logo" src="/portfolio.png" alt="" />
-    <div>Portfolio</div>
+    <span>
+            <div>Portfolio</div>
+
+    </span>
 </div>
 
 
+<span>
+    <h4>Workspace</h4>
 
-<h4>Workspace</h4>
+</span>
 
 
 <div className="flex-1">
     <img className="logo" src="/project.png" alt="" />
-    <div>Projects</div>
+    <span>
+            <div>Projects</div>
+
+    </span>
 </div>
 
 
 <div className="flex-1">
 <img className="logo" src="/Analytics.png" alt="" />
-<Link to="/Analytics">Analytics</Link>
+<span>
+    <Link to="/Analytics">Analytics</Link>
+
+</span>
 </div>
 
 <h4></h4>
 
 <div className="flex-1">
     <img className="logo" src="/settings.png" alt="" />
-    
-<Link to="/Settings">Settings</Link>
+    <span>
+        <Link to="/Settings">Settings</Link>
+
+    </span>
 </div>
 
 
 <div className="flex-1">
     <img className="logo" src="/help.png" alt="" />
-<div>Help</div>
+    <span><div>Help</div></span>
+
 </div>
 
 
 <div className="flex-1">
 <img className="logo" src="/profile.png" alt="" />
-
-<div>
+<span><div>
     Your Profile
-</div>
+</div></span>
+
 </div>
 
 </div>

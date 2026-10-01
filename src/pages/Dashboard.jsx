@@ -124,11 +124,11 @@ const [filterPriority,setFilterPriority]=useState("All");
       </button>
 
       {isModal && (
-        <div>
-          <div>
+        <div >
+          <div >
             <h2>Task Added</h2>
 
-            <form
+            <form className="modal"
               action=""
               onSubmit={(event) => {
                 event.preventDefault();
@@ -177,6 +177,7 @@ const [filterPriority,setFilterPriority]=useState("All");
                 }
               }}
             >
+              <label htmlFor="">Task Name</label>
               <input
                 value={newTask.name}
                 onChange={(event) => {
@@ -188,7 +189,7 @@ const [filterPriority,setFilterPriority]=useState("All");
                 type="text"
                 placeholder="Name"
               />
-            
+             <br />
               <label htmlFor="">Priority:</label>
 
               <select
@@ -207,7 +208,7 @@ const [filterPriority,setFilterPriority]=useState("All");
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
               </select>
-
+<br />
               <label htmlFor="">Status:</label>
 
               <select
@@ -230,8 +231,8 @@ const [filterPriority,setFilterPriority]=useState("All");
 
 
 
-
-
+<br />
+     <label htmlFor="">Due:</label>
               <input
                 value={newTask.due}
                 onChange={(event) => {
@@ -243,11 +244,11 @@ const [filterPriority,setFilterPriority]=useState("All");
                 type="text"
                 placeholder="due"
               />
-
+<br />
               <button type="button" onClick={changeModal}>
                 cancel
               </button>
-
+<br />
               {editedTaskId === null && (
                 <button type="submit">Submit</button>
               )}

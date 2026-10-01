@@ -29,7 +29,7 @@ onChange={(event)=>{
 
     </div>
     <div className='right-section'>
-        <button>
+        <button className='bell-icon-button'>
  <img className='bell-icon' src="./bell.png" alt="" />
         </button>
         <button>

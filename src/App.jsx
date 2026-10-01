@@ -35,7 +35,7 @@ setSearchFilter={setSearchFilter}
 }> 
 </Route>
 
-<Route path="/Mytasks" element={<MyTasks/>}></Route>
+<Route path="/Mytasks" element={<MyTasks searchFilter={searchFilter}/>}></Route>
 <Route    path="/Analytics" element={<Analytics/>}  ></Route>
 <Route path="/Settings" element={<Settings/>}></Route>
 

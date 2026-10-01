@@ -3,6 +3,7 @@
  flex: 1;
  flex-direction: column;
 }
+
 .blocks{
     display: flex;
     margin-bottom: 15px;
@@ -14,6 +15,7 @@ flex:1;
 background-color: rgb(161, 10, 10);
 margin-right: 10px;
 margin-left: 10px;
+margin-bottom: 10px;
 }
 .middle-part{
     flex: 1;
@@ -24,6 +26,7 @@ margin-left: 10px;
     margin-right: 15px;
     flex:1;
     background-color: rgb(65, 134, 87);
+    margin-bottom: 10px;
 }
 .bottom-part{
     flex:1;
@@ -92,9 +95,36 @@ justify-content: center;
     margin-right: auto;
     
 }
+.modal {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+
+ .blocks,
+  .middle-part{
+    flex-direction: column;
+  }
+
+  .modal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal input,
+  .modal select{
+    width: 90%;
+  }
+  
 
 
 
+
+}
 
 
 
