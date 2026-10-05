@@ -6,6 +6,7 @@ import {
   Tooltip,
   Legend
 } from "recharts";
+import "./Analytics.css";
 
 export function Analytics(){
 
@@ -165,6 +166,7 @@ return (
           </div>
         </div>
 
+<div className="pie-chart-flex">
 
 
 <PieChart width={400} height={300}>
@@ -210,6 +212,9 @@ return (
   <Tooltip />
   <Legend />
 </PieChart>
+
+
+</div>
 
 
 
