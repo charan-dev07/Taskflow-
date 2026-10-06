@@ -1,0 +1,57 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .header-container {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+body.dark-mode .sidebar {
+    background-color: #0d1b3e;
+}
+
+
+body.dark-mode .total-tasks,
+body.dark-mode .completed,
+body.dark-mode .progress,
+body.dark-mode .pending {
+    background-color: #1f2937;
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .task-progress,
+body.dark-mode .task-status {
+    background-color: #1f2937;
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .Task,
+body.dark-mode .Priority,
+body.dark-mode .Status,
+body.dark-mode .Due {
+    background-color: #263238;
+    color: #f5f5f5;
+}
+
+
+body.dark-mode button {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+
+body.dark-mode a {
+    color: #8ab4f8;
+}

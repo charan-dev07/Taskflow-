@@ -1,0 +1,30 @@
+.Profile,.Task-settings, .Preferences, .Danger-zone{
+ display: flex;
+ flex-direction: column;
+ 
+    background-color: red;
+}
+.Profile,
+.Preferences,
+.Task-settings,
+.Danger-zone {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+body.dark-mode .Profile,
+body.dark-mode .Preferences,
+body.dark-mode .Task-settings,
+body.dark-mode .Danger-zone {
+    background-color: #1f2937;
+    color: #f5f5f5;
+}
+
+.DarkMode,
+.LightMode {
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
