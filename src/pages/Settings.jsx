@@ -1,15 +1,10 @@
 
+import { useState } from 'react';
 import './Settings.css'
-import { useState, useEffect } from 'react';
-export function Settings(){
-const [isDark, setDark] = useState(
-  localStorage.getItem("darkMode") === "true"
-);
+export function Settings({isDark, setDark}){
 
-useEffect(() => {
-  document.body.classList.toggle("dark-mode", isDark);
-  localStorage.setItem("darkMode", isDark);
-}, [isDark]);
+
+const [isNotifications,setNotifications]=useState(localStorage.getItem("notifications")=="true");
 
 
 return (
@@ -27,7 +22,7 @@ return (
 <div className="Preferences">
  
 <div>
-  <p>Theme</p>
+  <p>Theme:</p>
   <button
   onClick={()=>{
     setDark(!isDark);
@@ -37,7 +32,18 @@ return (
   >{isDark?"Light" : "Dark"}</button>
 
 </div>
-<p>Notifications: [On/Off] </p>
+<div>
+<p>Notifications </p>
+<button onClick={()=>{
+  const newValue= !isNotifications;
+  setNotifications(newValue);
+  localStorage.setItem("notifications",newValue);
+}
+
+}>
+  {isNotifications?"OFF" : "ON"}
+</button>
+</div>
 </div>
 <h2>Task Settings</h2>
 
