@@ -7,13 +7,13 @@ export function Dashboard({searchFilter}) {
 
     
 const [newModal,setNewModal]=useState(false);
-const [filterPriority,setFilterPriority]=useState("All");
+const [filterPriority,setFilterPriority]=useState();
   const [isModal, setModal] = useState(false);
   const [filterStatus,setFilterStatus]=useState("All");
   const [newTask, setnewTask] = useState({
     name: "",
-    priority: "",
-    status: "",
+    priority: localStorage.getItem("Priority") || "",
+    status: localStorage.getItem('status') || "",
     due: "",
   });
 
