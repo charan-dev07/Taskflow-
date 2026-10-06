@@ -125,6 +125,10 @@ justify-content: center;
 
 
 }
+.confirmation-buttons {
+    display: flex;
+    gap: 5px;
+}
 
 
 

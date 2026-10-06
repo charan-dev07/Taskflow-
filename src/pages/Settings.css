@@ -28,3 +28,12 @@ body.dark-mode .Danger-zone {
     border-radius: 6px;
     cursor: pointer;
 }
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.confirmation-buttons {
+    display: flex;
+    gap: 5px;
+}

@@ -387,13 +387,16 @@ const [filterPriority,setFilterPriority]=useState();
         >Clear All Tasks</button>
  {newModal &&   <div className="confirmation">
           <p>Are you sure you want to delete all tasks?</p>
-          <button onClick={()=>{
+          <div className="confirmation-buttons">
+ <button onClick={()=>{
             setNewModal(false);
           }}>Cancel</button>
           <button onClick={()=>{
             setTasks([]);
             setNewModal(false);
           }}>Delete All</button>
+          </div>
+         
        </div> }
         <div className="task-heading">
           <p className="heading">Task</p>

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Settings.css'
 export function Settings({isDark, setDark}){
 
@@ -7,6 +7,35 @@ export function Settings({isDark, setDark}){
 const [isNotifications,setNotifications]=useState(localStorage.getItem("notifications")=="true");
 const [isPriority,setisPriority]= useState(localStorage.getItem("Priority") || "");
 const [isStatus, setisStatus]= useState(localStorage.getItem('status') || "");
+const [newModal,setNewModal]=useState(false);
+ const [tasks, setTasks] = useState( JSON.parse(localStorage.getItem("tasks")) ||[ 
+    {
+      name: "Build UI",
+      priority: "High",
+      status: "In Progress",
+      due: "Today",
+      id: crypto.randomUUID(),
+    },
+
+    {
+      name: "Learn React",
+      priority: "Medium",
+      status: "Pending",
+      due: "Fri",
+      id: crypto.randomUUID(),
+    },
+
+    {
+      name: "Finish Project",
+      priority: "Low",
+      status: "Completed",
+      due: "Sat",
+      id: crypto.randomUUID(),
+    },
+  ]  );
+ useEffect(()=>{
+      localStorage.setItem("tasks",JSON.stringify(tasks));
+     },[tasks]);
 return (
 
 <div>
@@ -94,8 +123,37 @@ onChange={
 <h2>Danger Zone</h2>
 
 <div className="Danger-zone">
+<div>
+    <button  
+        
+       onClick={()=>{
+        setNewModal(true);
+       }}
+        
+        >Clear All Tasks</button>
+ {newModal &&   <div className="confirmation">
+          <p>Are you sure you want to delete all tasks?</p>
+          <div className='confirmation-buttons'>
 
-<p>[Clear All Tasks]</p>
+<button onClick={()=>{
+            setNewModal(false);
+          }}>Cancel</button>
+          <button onClick={()=>{
+            setTasks([]);
+            setNewModal(false);
+          }}>Delete All</button>
+
+
+
+
+
+
+          </div>
+          
+       </div> }
+
+</div>
+
 </div>
 
 
