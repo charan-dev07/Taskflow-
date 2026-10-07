@@ -168,8 +168,9 @@ return (
 
 <div className="pie-chart-flex">
 
-
-<PieChart width={400} height={300}>
+<div>
+  <h2 className="pie-chart-headings">Task Status </h2>
+  <PieChart width={400} height={300}>
   <Pie
     data={statusData}
     dataKey="value"
@@ -189,10 +190,13 @@ return (
   <Tooltip />
   <Legend />
 </PieChart>
+</div>
 
 
 
-<PieChart width={400} height={300}>
+<div>
+  <h2 className="pie-chart-headings">Priority Distribution</h2>
+  <PieChart width={400} height={300}>
   <Pie
     data={priorityData}
     dataKey="value"
@@ -212,6 +216,8 @@ return (
   <Tooltip />
   <Legend />
 </PieChart>
+</div>
+
 
 
 </div>

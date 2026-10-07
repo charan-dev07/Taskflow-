@@ -10,3 +10,8 @@
     }
 
 }
+.pie-chart-headings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
